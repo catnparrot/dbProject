@@ -1,10 +1,12 @@
-package ch20.oracle.sec05;
+package ch20.oracle.sec00;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionEx {
+public class BaseCodeinSQL {
+	
+	
 	public static void main(String[] args) {
 		Connection conn = null;
 		try {
@@ -17,19 +19,24 @@ public class ConnectionEx {
 					"parrot",
 					"12345"
 					);
-			System.out.println("연결 성공");
+			
+			
+			
+			
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-		}catch(SQLException e) {
+		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
 			if(conn != null) {
 				try {
 					//연결 끊기
 					conn.close();
-					System.out.println("연결 끊기");
 				} catch (SQLException e) {}
 			}
 		}
 	}
+	
+	
+
 }
