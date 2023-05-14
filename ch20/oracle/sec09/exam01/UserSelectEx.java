@@ -35,7 +35,7 @@ public class UserSelectEx {
 				User user = new User();
 				user.setUserId(rs.getString("userid"));
 				user.setUserName(rs.getString("username"));
-				user.setUserPassword(rs.getString("userpassword"));
+				user.setUserPassword(rs.getString(3));
 				user.setUserAge(rs.getInt(4));
 				user.setUserEmail(rs.getString(5));
 	

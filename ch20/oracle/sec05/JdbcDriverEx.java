@@ -9,8 +9,8 @@ public class JdbcDriverEx {
     	try {
     		Class.forName("oracle.jdbc.driver.OracleDriver");
     		System.out.println("good");
-		} catch (ClassNotFoundException e) {
-			System.out.println("fuck");
+		} catch (Exception e) {
+			System.out.println("fxxx");
 		};
 		
     }

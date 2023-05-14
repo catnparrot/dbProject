@@ -22,7 +22,7 @@ public class BoardWithFileInsertEx {
 					);
 			
 			String sql = "" +
-			"INSERT INTO boards (bno, btitle, bcontent, bwriter, bdate, bfilename, bfiledata)"
+			"INSERT INTO boards (bno, btitle, bcontent, bwriter, bdate, bfilename, bfiledata) "
 					+ "VALUES(SEQ_BNO.NEXTVAL, ?, ?, ?, SYSDATE, ?, ?)";
 			
 			PreparedStatement pst = conn.prepareStatement(sql, new String[] {"bno"});

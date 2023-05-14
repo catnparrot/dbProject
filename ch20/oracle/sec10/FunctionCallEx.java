@@ -21,16 +21,16 @@ public class FunctionCallEx {
 					);
 			
 			String sql = "{? = call user_login(?, ?)}";
-			CallableStatement cstmt = conn.prepareCall(sql);
+			CallableStatement cst = conn.prepareCall(sql);
 			
-			cstmt.registerOutParameter(1, Types.INTEGER);
-			cstmt.setString(2, "winter");
-			cstmt.setString(3, "12345");
+			cst.registerOutParameter(1, Types.INTEGER);
+			cst.setString(2, "winter");
+			cst.setString(3, "12345");
 			
-			cstmt.execute();
-			int result = cstmt.getInt(1);
+			cst.execute();
+			int result = cst.getInt(1);
 			
-			cstmt.close();
+			cst.close();
 			
 			String message = switch(result) {
 			case 0 -> "로그인 성공";

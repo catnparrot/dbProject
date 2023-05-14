@@ -22,25 +22,25 @@ public class UserInsertEx {
 			
 			//매개변수화된 SQL문
 			String sql = "" +
-			"INSERT INTO users (userid, username, userpassword, userage, useremail)"
+			"INSERT INTO users (userid, username, userpassword, userage, useremail) "
 					+ "VALUES (?, ?, ?, ?, ?)";
 			
 			
 			//PreparedStatement 얻기 및 지정
 			//레코드 입력
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "winter");
-			pstmt.setString(2, "한겨울");
-			pstmt.setString(3, "12345");
-			pstmt.setInt(4, 25);
-			pstmt.setString(5, "winter@mycompany.com");
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setString(1, "winter");
+			pst.setString(2, "한겨울");
+			pst.setString(3, "12345");
+			pst.setInt(4, 25);
+			pst.setString(5, "winter@mycompany.com");
 			
 			//SQL 문 실행
-			int rows = pstmt.executeUpdate();
+			int rows = pst.executeUpdate();
 			System.out.println("저장된 행 수: " + rows);
 			
 			//PreparedStatement 닫기
-			pstmt.close();
+			pst.close();
 			
 			
 		}catch(ClassNotFoundException e){
