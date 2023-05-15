@@ -114,10 +114,9 @@ public class BoardExTestFinal {
     	
     	if(loginId != null) {
     		board.setBwriter(loginId);
-
-    	}else {
-    		System.out.print("작성자: ");
-	    	board.setBwriter(sc.nextLine());
+    		}else {
+    			System.out.print("작성자: ");
+    			board.setBwriter(sc.nextLine());
     	}
     	System.out.println("---------------------------------------");
     	System.out.println("보조 메뉴: 1.OK | 2.Cancel");
