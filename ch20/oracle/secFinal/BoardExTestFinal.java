@@ -1,4 +1,4 @@
-package ch20.oracle.secTesT;
+package ch20.oracle.secFinal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,12 +8,12 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 
-public class BoardExTest10 {
+public class BoardExTestFinal {
 	private Scanner sc = new Scanner(System.in);
 	private Connection conn;
 	private String loginId=null;
 	
-	public BoardExTest10() {
+	public BoardExTestFinal() {
 		try {
 			//JDBC Driver 등록
 			Class.forName("oracle.jdbc.OracleDriver");
@@ -304,8 +304,7 @@ public class BoardExTest10 {
     	System.out.print("비밀번호: ");
     	user.setUserPassword(sc.nextLine());
     	System.out.print("나이: ");
-    	user.setUserAge(sc.nextInt());
-    	sc.nextLine();
+    	user.setUserAge(Integer.parseInt(sc.nextLine()));
     	System.out.print("이메일: ");
     	user.setUserEmail(sc.nextLine());
     	

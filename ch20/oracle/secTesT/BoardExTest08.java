@@ -103,7 +103,7 @@ public class BoardExTest08 {
     	if(menuNo.equals("1")) {
     		try {
     			String sql = "" +
-        				"INSERT INTO (bno, btitle, bcontent, bwriter, bdate) "+
+        				"INSERT INTO boards (bno, btitle, bcontent, bwriter, bdate) "+
         				"VALUES (SEQ_BNO.NEXTVAL, ?, ?, ?, SYSDATE)";
     			PreparedStatement pst = conn.prepareStatement(sql);
     			pst.setString(1, board.getBtitle());
@@ -296,7 +296,7 @@ public class BoardExTest08 {
     	if(menuNo.equals("1")) {
     		try {
     			String sql = "" +
-        				"INSERT INTO boards (userid, username, userpassword, userage, useremail) "+
+        				"INSERT INTO users (userid, username, userpassword, userage, useremail) "+
         				"VALUES (?, ?, ?, ?, ?)";
     			PreparedStatement pst = conn.prepareStatement(sql);
     			pst.setString(1, user.getUserId());
